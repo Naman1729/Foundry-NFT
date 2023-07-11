@@ -7,19 +7,19 @@ import {BasicNft} from "../src/BasicNft.sol";
 
 contract MintBasicNft is Script {
     string public constant PUG =
-        "https://ipfs.io/ipfs/QmYPwCtX3cKHWM11v8fa3uyhwwnj2UkjxUxRktY6FvMuQC?filename=doggy1.png";
+        "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment(
-            "BasicNft",
-            block.chainid
+            "BasicNft", block.chainid
         );
+
         mintNftOnContract(mostRecentlyDeployed);
     }
 
     function mintNftOnContract(address contractAddress) public {
         vm.startBroadcast();
-        BasicNft(contractAddress).mintNft(PUG);
+        BasicNft(contractAddress).mintNft;
         vm.stopBroadcast();
     }
 }
