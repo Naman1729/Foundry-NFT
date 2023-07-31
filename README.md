@@ -45,7 +45,7 @@ forge script script/DeployMoodNFT.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key
   - deploy and verify
 
 ```bash
-    forge script script/DeployRaffle.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --verify --etherscan-api-key $ETHERSCAN_API_KEY --broadcast
+    forge script script/DeployMoodNFT.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --verify --etherscan-api-key $ETHERSCAN_API_KEY --broadcast
 ```
 
 - In anvil.
